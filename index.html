@@ -4,30 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Create a div element where the output will be displayed -->
-    <div id="output"></div>
+    <div class="main">
+        <div class="top">
+            <h1>AI Music Recommendation System</h1>
+        </div>
+        <div class="selector">
+            <div class="selector_text">
+                <p>Select a song from the dropdown</p>
+            </div>
+            <select class="dropdown" id="dropdown" name="dropdown" required onchange="displaySelectedSong()">
+                <option value="">Select a song</option>
+            </select>
+            <br><br>
+        </div>
+        <div id="selected-song-details"></div>
+        <div id="similar-songs"></div>
+    </div>
 
 
-    <iframe
-        title="Spotify Embed: Recommendation Playlist"
-        src="https://open.spotify.com/embed/playlist/0JiVp7Z0pYKI8diUV6HJyQ?si=b8d722ea8c9b47ee"
-        width="60%"
-        margin="0 auto";
-        height="380"
-        style="min-height: 360px;"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-    </iframe>
 
 
 
-    <script src="./script.js"></script>
+
+    <script src="./main_script.js"></script>
 </body>
 
 </html>
