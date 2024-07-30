@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b3b;
+    height: 100vh;
+    padding: 40px;
+}
+
+.main {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.top h1 {
+    margin: 0 auto;
+    justify-content: center;
+    color: #fff;
+    font-size: 4vw;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px !important;
+}
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px !important;
+}
+
+.selector_text {
+    color: #fff;
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.dropdown {
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+    font-size: 26px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a7f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    overflow: hidden;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+}
+
+.dropdown:hover,
+.dropdown:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #0095d9;
+    /* Darker shade on hover */
+    color: #fff;
+}
+
+.dropdown option {
+    padding: 8px;
+    background-color: #00a7f5;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown option:hover {
+    background-color: #f2f2f2;
+}
+
+#selected-song-details,
+#similar-songs {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#selected-song-details h2,
+#similar-songs h2 {
+    font-size: 2vw;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#similar-songs div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#similar-songs h3 {
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+}
+
+#similar-songs p {
+    font-size: 1vw;
+    margin: 5px 0;
+}
+
+/* Hover effect for the selected song details container */
+#selected-song-details:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Lighter shade on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    /* Stronger box-shadow on hover */
+}
+
+/* Hover effect for the similar songs container */
+#similar-songs:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Lighter shade on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    /* Stronger box-shadow on hover */
+}
+
+/* Hover effect for individual similar song containers */
+#similar-songs div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly lighter shade on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Stronger box-shadow on hover */
+}
+
+/* Music Preview Styling */
+audio {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.274);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 140, 255, 0.2);
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    filter: invert(1);
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: rgba(255, 255, 255, 0.541);
+    border-radius: 3px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .top h1 {
+        font-size: 6vw;
+    }
+
+    .selector_text {
+        font-size: 4vw;
+    }
+
+    .dropdown {
+        font-size: 18px;
+    }
+
+    #selected-song-details h2,
+    #similar-songs h2 {
+        font-size: 4vw;
+    }
+
+    #similar-songs h3 {
+        font-size: 3.5vw;
+    }
+
+    #similar-songs p {
+        font-size: 3vw;
+    }
+
+    audio {
+        padding: 5px;
+    }
+}
+
+/* Media Query for even smaller screens */
+@media (max-width: 480px) {
+    .top h1 {
+        font-size: 8vw;
+    }
+
+    .selector_text {
+        font-size: 5vw;
+    }
+
+    #selected-song-details h2,
+    #similar-songs h2 {
+        font-size: 6vw;
+    }
+
+    #similar-songs h3 {
+        font-size: 5vw;
+    }
+
+    #similar-songs p {
+        font-size: 4vw;
+    }
+}

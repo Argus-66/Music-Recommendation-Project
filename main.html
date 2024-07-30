@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="top">
+            <h1>AI Music Recommendation System</h1>
+        </div>
+        <div class="selector">
+            <div class="selector_text">
+                <p>Select a song from the dropdown</p>
+            </div>
+            <select class="dropdown" id="dropdown" name="dropdown" required onchange="displaySelectedSong()">
+                <option value="">Select a song</option>
+            </select>
+            <br><br>
+        </div>
+        <div id="selected-song-details"></div>
+        <div id="similar-songs"></div>
+    </div>
+
+
+
+
+
+
+    <script src="main_script.js"></script>
+</body>
+
+</html>
